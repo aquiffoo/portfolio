@@ -19,65 +19,66 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" data-translate="home">Home</a></li>
+          <li><a href="#projects" data-translate="projects">Projects</a></li>
+          <li><a href="#contact" data-translate="contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="translateBtn" data-translate="translate">Translate</button>
     </div>
   </header>
 
   <main>
     <section id="hero">
-      <h1 class="animated-text">aqui.ffoo - full stack dev :)</h1>
+      <h1 class="animated-text" data-translate="hero-title">aqui.ffoo - full stack dev :)</h1>
       <div class="emoji-container">
         <span class="emoji" data-emoji="🇧🇷">🇧🇷</span>
         <span class="emoji" data-emoji="👨‍💻">👨‍💻</span>
         <span class="emoji" data-emoji="🚀">🚀</span>
       </div>
-      <p>love tech, literally a junior dev, ceo and founder at aquislt</p>
+      <p data-translate="hero-description">love tech, literally a junior dev, ceo and founder at aquislt</p>
     </section>
 
     <section id="projects">
-      <h2>some projects</h2>
+      <h2 data-translate="projects-title">some projects</h2>
       <div class="project-grid">
         <a href="https://github.com/aquiffoo/textract" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>textract</h3>
-          <p>a lightweight text extractor made with JS</p>
+          <h3 data-translate="textract-title">textract</h3>
+          <p data-translate="textract-description">a lightweight text extractor made with JS</p>
         </a>
         <a href="https://github.com/aquiffoo/mtfree-api" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>mtfree-api</h3>
-          <p>morethanfree api</p>
+          <h3 data-translate="mtfree-api-title">mtfree-api</h3>
+          <p data-translate="mtfree-api-description">morethanfree api</p>
         </a>
         <a href="https://github.com/aquiffoo/morethanfree" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>morethanfree</h3>
-          <p>a "more than free" llm playground</p>
+          <h3 data-translate="morethanfree-title">morethanfree</h3>
+          <p data-translate="morethanfree-description">a "more than free" llm playground</p>
         </a>
         <a href="https://github.com/aquiffoo/PyBR" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>PyBR</h3>
-          <p>python compiler for portuguese language</p>
+          <h3 data-translate="pybr-title">PyBR</h3>
+          <p data-translate="pybr-description">python compiler for portuguese language</p>
         </a>
         <a href="https://github.com/aquiffoo/LyntrGPT" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>LyntrGPT</h3>
-          <p>just a chatgpt clone trained on the worst social media</p>
+          <h3 data-translate="lyntrgpt-title">LyntrGPT</h3>
+          <p data-translate="lyntrgpt-description">just a chatgpt clone trained on the worst social media</p>
         </a>
         <a href="https://github.com/aquiffoo/highnote" class="project-card" target="_blank" rel="noopener noreferrer">
-          <h3>highnote [OLD]</h3>
-          <p>simple text editor made with python and pysimplegui (back when it was free)</p>
+          <h3 data-translate="highnote-title">highnote [OLD]</h3>
+          <p data-translate="highnote-description">simple text editor made with python and pysimplegui (back when it was free)</p>
         </a>
       </div>
     </section>
 
     <section id="contact">
-      <h2>say hello</h2>
+      <h2 data-translate="contact-title">say hello</h2>
       <a href="https://github.com/aquiffoo" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://github.com/aquislt" class="contact-link" target="_blank" rel="noopener noreferrer">Aqui Solutions</a>
     </section>
   </main>
 
   <footer>
-    <p>© 2024 aquiffoo</p>
-    <p>made with ❤️, html, css and js.</p>
+    <p data-translate="footer-copyright">© 2024 aquiffoo</p>
+    <p data-translate="footer-made-with">made with ❤️, html, css and js.</p>
   </footer>
 
   <script src="script.js"></script>

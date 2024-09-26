@@ -157,6 +157,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const translateBtn = document.getElementById('translateBtn');
+  let currentLanguage = 'en';
+
+  const translations = {
+    en: {
+      'home': 'Home',
+      'projects': 'Projects',
+      'contact': 'Contact',
+      'translate': 'Traduzir',
+      'hero-title': 'aqui.ffoo - full stack dev :)',
+      'hero-description': 'love tech, literally a junior dev, ceo and founder at aquislt',
+      'projects-title': 'some projects',
+      'textract-title': 'textract',
+      'textract-description': 'a lightweight text extractor made with JS',
+      'mtfree-api-title': 'mtfree-api',
+      'mtfree-api-description': 'morethanfree api',
+      'morethanfree-title': 'morethanfree',
+      'morethanfree-description': 'a "more than free" llm playground',
+      'pybr-title': 'PyBR',
+      'pybr-description': 'python compiler for portuguese language',
+      'lyntrgpt-title': 'LyntrGPT',
+      'lyntrgpt-description': 'just a chatgpt clone trained on the worst social media',
+      'highnote-title': 'highnote [OLD]',
+      'highnote-description': 'simple text editor made with python and pysimplegui (back when it was free)',
+      'contact-title': 'say hello',
+      'footer-copyright': '© 2024 aquiffoo',
+      'footer-made-with': 'made with ❤️, html, css and js.'
+    },
+    pt: {
+      'home': 'Início',
+      'projects': 'Projetos',
+      'contact': 'Contato',
+      'translate': 'Translate',
+      'hero-title': 'aqui.ffoo - desenvolvedor full stack :)',
+      'hero-description': 'amo tecnologia, literalmente um dev júnior, ceo e fundador da aquislt',
+      'projects-title': 'alguns projetos',
+      'textract-title': 'textract',
+      'textract-description': 'um extrator de texto leve feito com JS',
+      'mtfree-api-title': 'mtfree-api',
+      'mtfree-api-description': 'api do morethanfree',
+      'morethanfree-title': 'morethanfree',
+      'morethanfree-description': 'um playground de llm "mais que gratuito"',
+      'pybr-title': 'PyBR',
+      'pybr-description': 'compilador python para língua portuguesa',
+      'lyntrgpt-title': 'LyntrGPT',
+      'lyntrgpt-description': 'apenas um clone do chatgpt treinado na pior rede social',
+      'highnote-title': 'highnote [ANTIGO]',
+      'highnote-description': 'editor de texto simples feito com python e pysimplegui (quando era gratuito)',
+      'contact-title': 'diga olá',
+      'footer-copyright': '© 2024 aquiffoo',
+      'footer-made-with': 'feito com ❤️, html, css e js.'
+    }
+  };
+
+  const translatePage = () => {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+      const key = element.getAttribute('data-translate');
+      element.textContent = translations[currentLanguage][key];
+    });
+  };
+
+  translateBtn.addEventListener('click', () => {
+    currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
+    translatePage();
+    updateTextSize();
+  });
+
   window.addEventListener('load', initializeText);
   window.addEventListener('resize', updateTextSize);
 });
