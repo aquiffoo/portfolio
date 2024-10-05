@@ -14,28 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleMouseMove = (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
-    
+
     cursor.style.left = `${mouseX}px`;
     cursor.style.top = `${mouseY}px`;
-    
+
     textCursor.style.left = `${mouseX}px`;
     textCursor.style.top = `${mouseY}px`;
-    
+
     if (!isMoving) {
       cursor.classList.add('moving');
       isMoving = true;
     }
-    
+
     clearTimeout(moveTimeout);
     moveTimeout = setTimeout(() => {
       cursor.classList.remove('moving');
       isMoving = false;
     }, 100);
-    
+
     const xStretch = (mouseX - prevMouseX) * 0.1;
     const yStretch = (mouseY - prevMouseY) * 0.1;
     cursor.style.transform = `translate(${xStretch}px, ${yStretch}px)`;
-    
+
     prevMouseX = mouseX;
     prevMouseY = mouseY;
   };
@@ -228,3 +228,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', initializeText);
   window.addEventListener('resize', updateTextSize);
 });
+
