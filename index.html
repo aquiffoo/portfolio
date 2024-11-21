@@ -10,21 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="cursor"></div>
-  <div class="text-cursor">Text</div>
   <header>
     <div class="header-content">
       <div class="logo-container">
         <img src="logo.png" alt="Logo" class="logo-image">
-        <div class="logo-text">aquiffoo</div>
+        <div class="logo-text">you found the hidden text???</div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#hero" data-translate="home">Home</a></li>
-          <li><a href="#projects" data-translate="projects">Projects</a></li>
-          <li><a href="#contact" data-translate="contact">Contact</a></li>
-        </ul>
-      </nav>
       <button id="translateBtn" data-translate="translate">Translate</button>
     </div>
   </header>
@@ -37,11 +28,11 @@
         <span class="emoji" data-emoji="👨‍💻">👨‍💻</span>
         <span class="emoji" data-emoji="🚀">🚀</span>
       </div>
-      <p data-translate="hero-description">love tech, literally a junior dev, ceo and founder at aquislt</p>
+      <p data-translate="hero-description">a 10th grader full stack developer from Brazil</p>
     </section>
 
     <section id="projects">
-      <h2 data-translate="projects-title">some projects</h2>
+      <h2 data-translate="projects-title">a peek of my github</h2>
       <div class="project-grid">
         <a href="https://github.com/aquiffoo/textract" class="project-card" target="_blank" rel="noopener noreferrer">
           <h3 data-translate="textract-title">textract</h3>
@@ -70,10 +61,43 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2 data-translate="contact-title">say hello</h2>
-      <a href="https://github.com/aquiffoo" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://github.com/aquislt" class="contact-link" target="_blank" rel="noopener noreferrer">Aqui Solutions</a>
+    <section id="skills">
+      <h2 data-translate="skills-title">my skills</h2>
+      
+      <p class="skill" id="s-html" data-translate="skill-html">
+        HTML
+      </p>
+      <p class="skill-explain" id="se-html" data-translate="skill-explain-html">
+        HTML is a markup language used to create web pages. It defines the structure and content of a web page, including headings, paragraphs, images, links, and other elements.
+      </p>
+
+      <p class="skill" id="s-css" data-translate="skill-css">
+        CSS
+      </p>
+      <p class="skill-explain" id="se-css" data-translate="skill-explain-css">
+        CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. It allows for the separation of content and presentation, enabling cleaner and more maintainable code.
+      </p>
+
+      <p class="skill" id="s-js" data-translate="skill-js">
+        JavaScript
+      </p>
+      <p class="skill-explain" id="se-js" data-translate="skill-explain-js">
+        JavaScript is a programming language that enables interactive web pages and is one of the three core technologies of the World Wide Web. It is a high-level, often imperative programming language that is especially suited for adding interactivity to web pages.
+      </p>
+
+      <p class="skill" id="s-py" data-translate="skill-py">
+        Python
+      </p>
+      <p class="skill-explain" id="se-py" data-translate="skill-explain-py">
+        Python is a high-level, interpreted programming language that is widely used for web development. It is known for its simplicity and readability, making it a popular choice for beginners and experienced developers alike.
+      </p>
+
+      <p class="skill" id="s-cs" data-translate="skill-cs">
+        C#
+      </p>
+      <p class="skill-explain" id="se-cs" data-translate="skill-explain-cs">
+        C# is a programming language developed by Microsoft. It is primarily used for developing Windows applications, but it can also be used for web development. C# is known for its strong typing and support for object-oriented programming.
+      </p>
     </section>
   </main>
 

@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7b7b7b;
+}
+
 :root {
-  --primary-color: #000000;
-  --secondary-color: #ffffff;
-  --background-color: #ffffff;
-  --text-color: #000000;
+  --primary-color: #e4e4e4;
+  --secondary-color: #0e0e0e;
+  --background-color: #000000;
+  --text-color: #ffffff;
 }
 
 @font-face {
@@ -11,109 +29,23 @@
 }
 
 body {
-  font-family: 'Funnel Display', 'Noto Color Emoji', sans-serif;
+  font-family: 'IBM Plex Mono', 'Noto Color Emoji', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  cursor: none;
 }
 
-a, button {
-  cursor: none;
-}
-
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.3s ease;
-}
-
-.cursor-particle {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.cursor.moving {
-  animation: cursorWave 0.5s infinite alternate;
-}
-
-@keyframes cursorWave {
-  0% { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.2) translate(2px, -2px); }
-}
-
-.cursor.on-link {
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid var(--primary-color);
-  border-radius: 0;
-  animation: none;
-}
-
-.text-cursor {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  padding: 2px 4px;
-  border-radius: 3px;
-  display: none;
-  transform: translate(-50%, -50%); 
-}
-
-@keyframes cursorSquiggly {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-::selection {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-header, footer {
+header {
   padding: 2rem;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   position: relative;
   overflow: hidden;
 }
 
-header::after, footer::after {
+header::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -165,7 +97,7 @@ header.blur-effect {
   header {
     position: sticky;
     top: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     z-index: 1000;
     padding: 0.75rem 1.5rem;
     border-radius: 15px;
@@ -202,12 +134,12 @@ main {
 }
 
 h1, h2, h3 {
-  font-family: 'Bitter', serif;
+  font-family: 'IBM Plex Mono', serif;
   font-weight: 700;
 }
 
 h1 {
-  font-family: 'Funnel Display', sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
   font-size: 4rem;
   margin-bottom: 1rem;
 }
@@ -230,14 +162,40 @@ h2 {
   animation: blink-caret .75s step-end infinite;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary-color); }
-}
-
 .emoji-container {
   display: flex;
   margin: 2rem 0;
+}
+
+.skill {
+  font-size: 24px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  background-color: var(--secondary-color);
+}
+
+#s-html:hover~#se-html, #s-css:hover~#se-css, #s-js:hover~#se-js, #s-py:hover~#se-py, #s-cs:hover~#se-cs {
+  display: block;
+}
+
+.skill-explain {
+  display: none;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background-color: #303030;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .emoji {
@@ -263,7 +221,6 @@ h2 {
   background-color: var(--secondary-color);
   padding: 2rem;
   border-radius: 8px;
-  border: 1px solid var(--primary-color);
   transition: transform 0.3s ease;
   text-decoration: none;
   color: var(--text-color);
@@ -285,6 +242,26 @@ h2 {
   content: '→';
   margin-left: 0.5rem;
   transition: transform 0.3s ease;
+}
+
+#s-html {
+  color: #ee7456;
+}
+
+#s-css {
+  color: #ac6eeb;
+}
+
+#s-js {
+  color: #f3e368;
+}
+
+#s-py {
+  color: #67a3d5;
+}
+
+#s-cs {
+  color: #6e82af;
 }
 
 .project-card:hover h3::after {
@@ -316,7 +293,7 @@ h2 {
 }
 
 footer {
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
