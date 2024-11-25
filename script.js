@@ -251,4 +251,3 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', initializeText);
   window.addEventListener('resize', updateTextSize);
 });
-

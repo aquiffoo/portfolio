@@ -35,14 +35,18 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-image:
+    linear-gradient(to right, #0e0e0e 1px, transparent 1px),
+    linear-gradient(to bottom, #0e0e0e 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
 header {
   padding: 2rem;
-  background-color: var(--secondary-color);
   color: var(--primary-color);
   position: relative;
   overflow: hidden;
+  padding: 0 50%;
 }
 
 header::after {
@@ -52,8 +56,6 @@ header::after {
   left: 0;
   right: 0;
   height: 10px;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-  animation: wave 5s linear infinite;
 }
 
 @keyframes wave {
@@ -97,7 +99,6 @@ header.blur-effect {
   header {
     position: sticky;
     top: 10px;
-    background-color: var(--secondary-color);
     z-index: 1000;
     padding: 0.75rem 1.5rem;
     border-radius: 15px;
@@ -147,6 +148,15 @@ h1 {
 h2 {
   font-size: 3rem;
   margin-top: 2rem;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+#hero {
+  background-color: var(--secondary-color);
+  padding: 4rem;
+  border-radius: 15px;
 }
 
 .animated-text {
@@ -162,9 +172,15 @@ h2 {
   animation: blink-caret .75s step-end infinite;
 }
 
+.animated-text:hover {
+  color: #8b8b8b;
+  transition: 0.3s ease-in-out;
+}
+
 .emoji-container {
   display: flex;
   margin: 2rem 0;
+  justify-content: center;
 }
 
 .skill {
@@ -295,9 +311,11 @@ h2 {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1.2rem;
+  border-radius: 15px;
+  margin: 20px;
 }
 
 @keyframes fadeInUp {
