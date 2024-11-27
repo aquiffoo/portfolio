@@ -21,11 +21,16 @@
   --secondary-color: #0e0e0e;
   --background-color: #000000;
   --text-color: #ffffff;
-}
+} 
 
 @font-face {
   font-family: 'Apple Color Emoji';
   src: local('Apple Color Emoji');
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 body {
@@ -194,7 +199,7 @@ h2 {
   background-color: var(--secondary-color);
 }
 
-#s-html:hover~#se-html, #s-css:hover~#se-css, #s-js:hover~#se-js, #s-py:hover~#se-py, #s-cs:hover~#se-cs {
+#s-html:hover~#se-html, #s-css:hover~#se-css, #s-js:hover~#se-js, #s-py:hover~#se-py, #s-cs:hover~#se-cs, #s-go:hover~#se-go {
   display: block;
 }
 
@@ -278,6 +283,10 @@ h2 {
 
 #s-cs {
   color: #6e82af;
+}
+
+#s-go {
+  color: #00ADD8;
 }
 
 .project-card:hover h3::after {
@@ -501,8 +510,4 @@ nav ul li a:hover {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-#translateBtn:hover {
-  background-color: rgba(255, 255, 255, 0.8);
 }
