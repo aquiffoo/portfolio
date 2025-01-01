@@ -2,8 +2,8 @@
 
 :root {
 	--primary-color: #e4e4e4;
-	--secondary-color: #0e0e0e;
-	--background-color: #000000;
+	--secondary-color: #000000;
+	--background-color: #050505;
 	--text-color: #ffffff;
 }
 
@@ -27,7 +27,6 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 4rem;
 	margin-bottom: 1rem;
 }
 
@@ -55,7 +54,7 @@ header {
 	left: 0;
 	width: 100%;
 	padding: 1rem;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: #050505b3;
 	backdrop-filter: blur(10px);
 	z-index: 1000;
 	transition: transform 0.3s ease-out;
