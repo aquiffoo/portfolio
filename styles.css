@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Geist+Mono:wght@100..900&display=swap');
 
 :root {
 	--primary-color: #e4e4e4;
-	--secondary-color: #000000;
-	--background-color: #050505;
+	--secondary-color: #0a0a0ab3;
+	--background-color: #101013;
 	--text-color: #ffffff;
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Inter', 'Noto Color Emoji', sans-serif;
+	font-family: 'Geist Mono', 'Noto Color Emoji', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -22,12 +22,42 @@ body {
 	padding-top: 60px; 
 }
 
+.halo-effect {
+	pointer-events: none;
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: radial-gradient(circle at center,
+	rgba(255,255,255,0.15) 0%,
+	rgba(255,255,255,0.05) 40%,
+	transparent 90%
+	);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 999;
+	mix-blend-mode: screen;
+	filter: blur(20px);
+}
+
+.halo-trigger {
+	position: relative;
+}
+
 h1, h2, h3 {
 	font-weight: 700;
 }
 
 h1 {
 	margin-bottom: 1rem;
+	font-family: 'Doto', sans-serif !important;
+	font-size: clamp(2rem, 5vw, 4rem);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	line-height: 1.2;
 }
 
 h2 {
@@ -36,6 +66,7 @@ h2 {
 	background-color: var(--secondary-color);
 	padding: 2rem;
 	border-radius: 15px;
+	border: 1px dashed #ffffff33;
 }
 
 a {
@@ -121,6 +152,7 @@ main {
 
 #hero {
 	background-color: var(--secondary-color);
+	border: 1px dashed #ffffff33;
 	padding: 4rem;
 	border-radius: 15px;
 }
@@ -137,11 +169,6 @@ main {
 	display: inline-block;
 	animation: blink-caret .75s step-end infinite;
 	visibility: visible;
-}
-
-.animated-text:hover {
-	color: #8b8b8b;
-	transition: 0.3s ease-in-out;
 }
 
 .emoji-container {
@@ -179,6 +206,7 @@ main {
 	display: block;
 	position: relative;
 	overflow: hidden;
+	border: 1px dashed #ffffff33;
 }
 
 .project-card:hover {
@@ -228,6 +256,7 @@ main {
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 1rem;
+	border: 1px dashed #ffffff33;
 }
 
 .skill-item:hover {

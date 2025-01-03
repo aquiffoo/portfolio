@@ -126,6 +126,27 @@ document.addEventListener('DOMContentLoaded', () => {
 		item.appendChild(skillPercentageElement);
 	});
 
+	const halo = document.createElement('div');
+	halo.className = 'halo-effect';
+	document.body.appendChild(halo);
+
+	const triggered = document.querySelectorAll('.project-card, .skill-item, h1,h2, h3, nav ul li a, section');
+	triggered.forEach(el => el.classList.add('halo-trigger'));
+
+	document.addEventListener('mousemove', (e) => {
+		const x = e.clientX;
+		const y = e.clientY;
+
+		halo.style.left = x + 'px';
+		halo.style.top = y + 'px';
+
+		const hovered = document.elementFromPoint(x,y);
+		if (hovered && hovered.closest('.halo-trigger')) halo.style.opacity = '1';
+		else halo.style.opacity = '0';
+	});
+
+	if ('ontouchstart'in window) halo.style.display = 'none'
+
 	window.addEventListener('load', initializeText);
 	window.addEventListener('resize', updateTextSize);
 });
