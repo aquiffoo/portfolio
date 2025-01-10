@@ -63,7 +63,7 @@ h1 {
 h2 {
 	font-size: 3rem;
 	margin-top: 2rem;
-	background-color: var(--secondary-color);
+	background-color: none;
 	padding: 2rem;
 	border-radius: 15px;
 	border: 1px dashed #ffffff33;
@@ -151,7 +151,7 @@ main {
 }
 
 #hero {
-	background-color: var(--secondary-color);
+	background-color: none;
 	border: 1px dashed #ffffff33;
 	padding: 4rem;
 	border-radius: 15px;
@@ -197,7 +197,7 @@ main {
 }
 
 .project-card {
-	background-color: var(--secondary-color);
+	background-color: none;
 	padding: 2rem;
 	border-radius: 8px;
 	transition: transform 0.3s ease;
@@ -248,7 +248,7 @@ main {
 }
 
 .skill-item {
-	background-color: var(--secondary-color);
+	background-color: none;
 	padding: 1rem;
 	border-radius: 8px;
 	transition: transform 0.3s ease;
