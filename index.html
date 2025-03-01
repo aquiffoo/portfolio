@@ -1,122 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="this is the personal website of aquiffoo, a 10th grader full stack developer from Brazil">
-	<title>hey, i am aquiffoo</title>
-	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aquiffoo - Full Stack Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header>
-		<div class="header-content">
-			<div class="logo-container">
-				<img src="logo.png" alt="Logo" class="logo-image" loading="lazy">
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#hero" class="nav-link">Home</a></li>
-					<li><a href="#projects" class="nav-link">Projects</a></li>
-					<li><a href="#skills" class="nav-link">Skills</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+    <main class="container">
+        <header class="header">
+            <h1 class="title">aquiffoo</h1>
+            <p class="subtitle">young full stack dev from brazil</p>
+        </header>
 
-	<main>
-		<section id="hero">
-			<h1 class="animated-text" data-translate="hero-title">aqui.ffoo - full stack dev :)</h1>
-			<div class="emoji-container">
-				<span class="emoji" data-emoji="🇧🇷">🇧🇷</span>
-				<span class="emoji" data-emoji="👨‍💻">👨‍💻</span>
-				<span class="emoji" data-emoji="🚀">🚀</span>
-			</div>
-			<p data-translate="hero-description">a full stack developer from Brazil that's currently in high school, creator of <a href="https://aquigpt.com.br/" target="_blank" rel="noopener noreferrer">AquiGPT</a></p>  
-		</section>
-
-		<section id="projects">
-			<h2 data-translate="projects-title">a peek at my <a href="https://github.com/aquiffoo" target="_blank">github</a></h2>
-			<div class="project-grid">
-				<a href="https://github.com/aquiffoo/expl-term" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="textract-title">expl-term</h3>
-					<p data-translate="textract-description">a lightweight file explorer on the terminal built with rust btw</p>
-				</a>
-				<a href="https://github.com/aquiffoo/modu" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="mtfree-api-title">modu</h3>
-					<p data-translate="mtfree-api-description">it's not mine, but i've contributed to it by adding the "os" package.</p>
-				</a>
-				<a href="https://github.com/aquiffoo/goblet" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="morethanfree-title">goblet</h3>
-					<p data-translate="morethanfree-description">a go framework for building websites, similar to python's flask</p>
-				</a>
-				<a href="https://github.com/aquiffoo/supermin" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="pybr-title">supermin</h3>
-					<p data-translate="pybr-description">a C header file for making it look clean and functional</p>
-				</a>
-				<a href="https://github.com/aquiffoo/portfolio" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="lyntrgpt-title">portfolio</h3>
-					<p data-translate="lyntrgpt-description">this portfolio! you're in here</p>
-				</a>
-				<a href="https://github.com/aquiffoo/cablyai-client" class="project-card" target="_blank" rel="noopener noreferrer">
-					<h3 data-translate="highnote-title">cablyai-client</h3>
-					<p data-translate="highnote-description">an npm package that makes using cablyai easier for begginers</p>
-				</a>
-			</div>
-		</section>
-
-		<section id="skills">
-				<h2 data-translate="skills-title">my skills</h2>
-				<div class="skills-container">
-					<div class="skill-item" data-skill="html">
-						<span class="skill-name" data-translate="skill-html">HTML</span>
-						<div class="skill-bar"><div class="skill-level html" data-percentage="90"></div></div>
-						<span class="skill-description" data-translate="skill-explain-html">HTML is a markup language used to create web pages. It defines the structure and content of a web page, including headings, paragraphs, images, links, and other elements.</span>
-					</div>
-					<div class="skill-item" data-skill="css">
-						<span class="skill-name" data-translate="skill-css">CSS</span>
-						<div class="skill-bar"><div class="skill-level css" data-percentage="90"></div></div>
-						<span class="skill-description" data-translate="skill-explain-css">CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. It allows for the separation of content and presentation, enabling cleaner and more maintainable code.</span>
-					</div>
-					<div class="skill-item" data-skill="javascript">
-						<span class="skill-name" data-translate="skill-js">JavaScript</span>
-						<div class="skill-bar"><div class="skill-level javascript" data-percentage="70"></div></div>
-						<span class="skill-description" data-translate="skill-explain-js">JavaScript is a programming language that enables interactive web pages and is one of the three core technologies of the World Wide Web. It is a high-level, often imperative programming language that is especially suited for adding interactivity to web pages.</span>
-					</div>
-					<div class="skill-item" data-skill="python">
-						<span class="skill-name" data-translate="skill-py">Python</span>
-						<div class="skill-bar"><div class="skill-level python" data-percentage="85"></div></div>
-						<span class="skill-description" data-translate="skill-explain-py">Python is a high-level, interpreted programming language that is widely used for web development. It is known for its simplicity and readability, making it a popular choice for beginners and experienced developers alike.</span>
-					</div>
-					<div class="skill-item" data-skill="csharp">
-						<span class="skill-name" data-translate="skill-cs">C#</span>
-						<div class="skill-bar"><div class="skill-level csharp" data-percentage="75"></div></div>
-						<span class="skill-description" data-translate="skill-explain-cs">C# is a programming language developed by Microsoft. It is primarily used for developing Windows applications, but it can also be used for web development. C# is known for its strong typing and support for object-oriented programming.</span>
-					</div>
-					<div class="skill-item" data-skill="go">
-						<span class="skill-name" data-translate="skill-go">Go</span>
-						<div class="skill-bar"><div class="skill-level go" data-percentage="65"></div></div>
-						<span class="skill-description" data-translate="skill-explain-go">Go is a programming language developed by Google. It is known for its simplicity and efficiency, making it a popular choice for building scalable and high-performance applications.</span>
-					</div>
-					<div class="skill-item" data-skill="rust">
-						<span class="skill-name" data-translate="skill-rust">Rust</span>
-						<div class="skill-bar"><div class="skill-level rust" data-percentage="35"></div></div>
-						<span class="skill-description" data-translate="skill-explain-rust">Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</span>
-					</div>
-					<div class="skill-item" data-skill="typescript">
-						<span class="skill-name" data-translate="skill-ts">TypeScript</span>
-						<div class="skill-bar"><div class="skill-level typescript" data-percentage="70"></div></div>
-						<span class="skill-description" data-translate="skill-explain-ts">TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It is designed for the development of large applications and transcompiles to JavaScript.</span>
-					</div>
+		<h2>My best projects</h2>
+		<section class="projects-grid">
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🧠</div>
+					<h2>AquiGPT</h2>
 				</div>
-			</section>
-	</main>
+				<p class="description">Multipurpose and clean AI application, with powerful tools and a small price</p>
+				<div class="language-badges">
+					<span class="language-badge python">Python</span>
+					<span class="language-badge js">JavaScript</span>
+					<span class="language-badge html">HTML</span>
+					<span class="language-badge css">CSS</span>
+				</div>
+				<a href="https://aquigpt.com.br" target="_blank" class="card-link">View Project →</a>
+			</article>
 
-	<footer>
-		<p data-translate="footer-copyright">© 2025 aquiffoo</p>
-		<p data-translate="footer-made-with">made with ❤️, html, css and js.</p>
-	</footer>
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🏖️</div>
+					<h2>playa</h2>
+				</div>
+				<p class="description">A lightweight audio/video player in the CLI, made with Rust and some ffmpeg</p>
+				<div class="language-badges">
+					<span class="language-badge rust">Rust</span>
+				</div>
+				<a href="https://github.com/aquiffoo/expl-term" target="_blank" class="card-link">View Project →</a>
+			</article>
 
-	<script src="script.js"></script>
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">📦</div>
+					<h2>modu</h2>
+				</div>
+				<p class="description">Contributed to the "os" package in the BEST programming language</p>
+				<div class="language-badges">
+					<span class="language-badge rust">Rust</span>
+				</div>
+				<a href="https://github.com/aquiffoo/modu" target="_blank" class="card-link">View Project →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🍵</div>
+					<h2>goblet</h2>
+				</div>
+				<p class="description">A Go framework for building websites, similar to Flask</p>
+				<div class="language-badges">
+					<span class="language-badge go">Go</span>
+					<span class="language-badge html">HTML</span>
+					<span class="language-badge css">CSS</span>
+				</div>
+				<a href="https://github.com/aquiffoo/goblet" target="_blank" class="card-link">View Project →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">⚒️</div>
+					<h2>supermin</h2>
+				</div>
+				<p class="description">A C header file for making it look clean and functional</p>
+				<div class="language-badges">
+					<span class="language-badge c">C</span>
+				</div>
+				<a href="https://github.com/aquiffoo/supermin" target="_blank" class="card-link">View Project →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">📡</div>
+					<h2>cablyai-client</h2>
+				</div>
+				<p class="description">An npm package that makes using CablyAI easier for beginners</p>
+				<div class="language-badges">
+					<span class="language-badge ts">TypeScript</span>
+				</div>
+				<a href="https://github.com/aquiffoo/cablyai-client" target="_blank" class="card-link">View Project →</a>
+			</article>
+        </section>
+
+		<h2>Some places you can find me</h2>
+		<section class="projects-grid">
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🐙</div>
+					<h2>GitHub</h2>
+				</div>
+				<p class="description">Even though it's not a social media, it's where i post (most of) my code</p>
+				<a href="https://github.com/aquiffoo" target="_blank" class="card-link">Check out my profile →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🐦</div>
+					<h2>X/Twitter</h2>
+				</div>
+				<p class="description">One of the most used social media platforms for catching up with the news</p>
+				<a href="https://x.com/aquiffoo" target="_blank" class="card-link">Take a read at my tweets →</a>
+			</article>
+
+			<article class="project-card">
+				<div class="card-header">
+					<div class="icon">🗨️</div>
+					<h2>Discord</h2>
+				</div>
+				<p class="description">One of my most used places for chatting with people</p>
+				<a href="https://discord.com/users/1033376732780171375" target="_blank" class="card-link">Chat with me →</a>
+			</article>
+        </section>
+    </main>
 </body>
+</html>
