@@ -213,6 +213,38 @@ h2 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 0.75rem 1rem;
+    align-items: center;
+}
+
+.model-select {
+    position: relative;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) - 0.25rem);
+    padding: 0.5rem 1rem;
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.model-select:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+}
+
+.model-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.model-select option {
+    background: var(--card);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    padding: 0.5rem;
 }
 
 #chat-input {
@@ -443,5 +475,15 @@ h2 {
         right: 1rem;
         margin-bottom: 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .model-select {
+        max-width: 100px;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .chat-bar {
+        gap: 0.25rem;
     }
 }
