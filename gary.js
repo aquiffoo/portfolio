@@ -14,7 +14,7 @@ const header = document.querySelector('.header');
         }
     }
 
-    setInterval(fetchGaryImage, 10000);
+    setInterval(fetchGaryImage, 60000);
 
     header.addEventListener('mouseenter', () => {
         currentGaryIndex = (currentGaryIndex + 1) % garyImages.length;
