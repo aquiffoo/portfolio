@@ -1,171 +1,90 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aquiffoo - Full Stack Developer</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://garybot.dev">
-    <link rel="preconnect" href="https://cdn.garybot.dev" crossorigin>
-    <link rel="preload" as="image" href="https://cdn.garybot.dev/Gary245.jpg">
+  <meta charset="UTF-8">
+  <title>aqui</title>
+  <style>
+    body {
+      font-family: 'georgia', 'serif';
+      background-color: #fdfdfd;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: auto;
+    }
+    header {
+      padding: 4rem 2rem 2rem;
+      text-align: left;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+    main {
+      padding: 0 2rem 4rem;
+    }
+    main p {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    a {
+      color: #111;
+      text-decoration: none;
+      border-bottom: 1px solid #999;
+      padding-bottom: 0.1rem;
+    }
+    a:hover {
+      color: #555;
+      border-color: #555;
+    }
+    footer {
+      text-align: left;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-    <main class="container">
-        <header class="header">
-            <h1 class="title">aquiffoo</h1>
-            <p class="subtitle">young full stack dev from brazil</p>
-        </header>
-
-        <div class="chat-bar">
-            <input type="text" id="chat-input" placeholder="Chat with AquiGPT Free..." />
-            <select class="model-select" id="model-select">
-                <option value="gpt-4o-mini">ChatGPT 4o mini</option>
-                <option value="deepseek-chat">DeepSeek V3</option>
-                <option value="llama-3.3-70b">Llama 3.3 70b Turbo</option>
-            </select>
-            <button id="chat-send">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
-            </button>
-        </div>
-
-        <h2>My best projects</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🧠</div>
-                    <h2>AquiGPT</h2>
-                </div>
-                <p class="description">Multipurpose and clean AI application, with powerful tools and a small price</p>
-                <div class="language-badges">
-                    <span class="language-badge python">Python</span>
-                    <span class="language-badge js">JavaScript</span>
-                    <span class="language-badge html">HTML</span>
-                    <span class="language-badge css">CSS</span>
-                </div>
-                <a href="https://aquigpt.com.br" target="_blank" class="card-link">View Project →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🏖️</div>
-                    <h2>playa</h2>
-                </div>
-                <p class="description">A lightweight audio/video player in the CLI, made with Rust and some ffmpeg</p>
-                <div class="language-badges">
-                    <span class="language-badge rust">Rust</span>
-                </div>
-                <a href="https://github.com/aquiffoo/playa" target="_blank" class="card-link">View Project →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">📦</div>
-                    <h2>modu</h2>
-                </div>
-                <p class="description">Contributed to the "os" package in the BEST programming language</p>
-                <div class="language-badges">
-                    <span class="language-badge rust">Rust</span>
-                </div>
-                <a href="https://github.com/aquiffoo/modu" target="_blank" class="card-link">View Project →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🍵</div>
-                    <h2>goblet</h2>
-                </div>
-                <p class="description">A Go framework for building websites, similar to Flask</p>
-                <div class="language-badges">
-                    <span class="language-badge go">Go</span>
-                    <span class="language-badge html">HTML</span>
-                    <span class="language-badge css">CSS</span>
-                </div>
-                <a href="https://github.com/aquiffoo/goblet" target="_blank" class="card-link">View Project →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">⚒️</div>
-                    <h2>supermin</h2>
-                </div>
-                <p class="description">A C header file for making it look clean and functional</p>
-                <div class="language-badges">
-                    <span class="language-badge c">C</span>
-                </div>
-                <a href="https://github.com/aquiffoo/supermin" target="_blank" class="card-link">View Project →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">📡</div>
-                    <h2>cablyai-client</h2>
-                </div>
-                <p class="description">An npm package that makes using CablyAI easier for beginners</p>
-                <div class="language-badges">
-                    <span class="language-badge ts">TypeScript</span>
-                </div>
-                <a href="https://github.com/aquiffoo/cablyai-client" target="_blank" class="card-link">View Project →</a>
-            </article>
-        </section>
-
-        <h2>Some places you can find me</h2>
-        <section class="projects-grid">
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🐙</div>
-                    <h2>GitHub</h2>
-                </div>
-                <p class="description">Even though it's not a social media, it's where i post (most of) my code</p>
-                <a href="https://github.com/aquiffoo" target="_blank" class="card-link">Check out my profile →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🐦</div>
-                    <h2>X/Twitter</h2>
-                </div>
-                <p class="description">One of the most used social media platforms for catching up with the news</p>
-                <a href="https://x.com/aquiffoo" target="_blank" class="card-link">Take a read at my tweets →</a>
-            </article>
-
-            <article class="project-card">
-                <div class="card-header">
-                    <div class="icon">🗨️</div>
-                    <h2>Discord</h2>
-                </div>
-                <p class="description">One of my most used places for chatting with people</p>
-                <a href="https://discord.com/users/1033376732780171375" target="_blank" class="card-link">Chat with me →</a>
-            </article>
-        </section>
-
-        <h2>Let's play some 2048?</h2>
-        <section class="game-container">
-            <div class="game-header">
-                <button id="start-game" class="game-button">Start</button>
-                <div class="score-container">
-                    <span>Score:</span>
-                    <span id="score">0</span>
-                </div>
-                <button id="restart" class="game-button" disabled>Restart</button>
-            </div>
-            <div id="game-board" class="game-board"></div>
-        </section>
-        
-        <div id="game-over-dialog" class="dialog-overlay">
-            <div class="dialog-content">
-                <h3>Game Over!</h3>
-                <p>You got: <span id="final-score">0</span></p>
-                <div class="dialog-actions">
-                    <button id="play-again" class="game-button">Play Again</button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="animations.js"></script>
-    <script src="2048.js"></script>
-    <script src="aquigpt.js"></script>
-	<script src="gary.js"></script>
+  <header>
+    <h1>aqui</h1>
+    <p>ai enthusiast • software engineer • brazilian human debugging the future</p>
+  </header>
+  <main>
+    <p>hello, i’m aqui. i spend most of my time exploring artificial intelligence and building curious pieces of software. think of me as a brazilian engineer trying to add a little wit and elegance to the otherwise chaotic landscape of ai development.</p>
+    <p>i believe in simple ideas, strong execution, and typography that doesn’t get in the way of what matters: clarity.</p>
+    <p>if you’re looking for my work, you’ll find a trail of experiments scattered across the internet:</p>
+    <ul>
+      <li><a href="https://github.com/aquiffoo">github</a></li>
+      <li><a href="https://hf.co/aquif-ai">hf.co/aquif-ai</a></li>
+    </ul>
+    <p>selected projects:</p>
+    <ul>
+      <li><strong>playa</strong> — a minimal video player in the terminal, written in rust and inspired by the spirit of ffmpeg</li>
+      <li><strong>supermin</strong> — a c library that makes freeing memory (and sanity) much easier and more intuitive</li>
+      <li><strong>goblet</strong> — a lightweight go web framework with a style reminiscent of flask, but brewed for gophers</li>
+      <li><strong>modu</strong> — a programming language built by cyteon; i contributed by adding the “os” library, enabling terminal command execution straight from the language</li>
+    </ul>
+    <p>curiosity keeps me going, code keeps me busy.</p>
+  </main>
+  <footer>
+    <p>© aqui — lowercase forever.</p>
+  </footer>
 </body>
 </html>
