@@ -1,89 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>aqui</title>
-  <style>
-    body {
-      font-family: 'georgia', 'serif';
-      background-color: #fdfdfd;
-      color: #111;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: auto;
-    }
-    header {
-      padding: 4rem 2rem 2rem;
-      text-align: left;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      font-weight: 400;
-      letter-spacing: -0.5px;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: #555;
-    }
-    main {
-      padding: 0 2rem 4rem;
-    }
-    main p {
-      margin-bottom: 1.5rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: #111;
-      text-decoration: none;
-      border-bottom: 1px solid #999;
-      padding-bottom: 0.1rem;
-    }
-    a:hover {
-      color: #555;
-      border-color: #555;
-    }
-    footer {
-      text-align: left;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquiles Fernandes - Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .bio {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .skills-section {
+            margin-bottom: 3rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #374151;
+        }
+
+        .skills-list img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .project {
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 2rem;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header span {
+            font-size: 1.5rem;
+        }
+
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-link {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .project-link:hover {
+            color: #1a1a1a;
+        }
+
+        .project-description {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>aqui</h1>
-    <p>ai enthusiast • software engineer • brazilian human debugging the future</p>
-  </header>
-  <main>
-    <p>hello, i’m aqui. i spend most of my time exploring artificial intelligence and building curious pieces of software. think of me as a brazilian engineer trying to add a little wit and elegance to the otherwise chaotic landscape of ai development.</p>
-    <p>i believe in simple ideas, strong execution, and typography that doesn’t get in the way of what matters: clarity.</p>
-    <p>if you’re looking for my work, you’ll find a trail of experiments scattered across the internet:</p>
-    <ul>
-      <li><a href="https://github.com/aquiffoo">github</a></li>
-      <li><a href="https://hf.co/aquiffoo">hf.co/aquiffoo</a></li>
-    </ul>
-    <p>selected projects:</p>
-    <ul>
-      <li><strong>playa</strong> — a minimal video player in the terminal, written in rust and inspired by the spirit of ffmpeg</li>
-      <li><strong>supermin</strong> — a c library that makes freeing memory (and sanity) much easier and more intuitive</li>
-      <li><strong>goblet</strong> — a lightweight go web framework with a style reminiscent of flask, but brewed for gophers</li>
-      <li><strong>modu</strong> — a programming language built by cyteon; i contributed by adding the “os” library, enabling terminal command execution straight from the language</li>
-    </ul>
-    <p>curiosity keeps me going, code keeps me busy.</p>
-  </main>
-  <footer>
-    <p>© aqui — lowercase forever.</p>
-  </footer>
+    <div class="container">
+        <header>
+            <img class="profile-img" src="https://avatars.githubusercontent.com/u/84942074?v=4" />
+            <h1>Hi, I'm aquiffoo</h1>
+            <p class="subtitle">Aquiles Fernandes • Rio de Janeiro, Brazil</p>
+            
+            <p class="bio">
+                As a junior in high school, I develop tools and systems that focus on simplicity and performance. 
+                I'm interested in mathematics, large language models, and building software that solves real problems 
+                without unnecessary complexity.
+            </p>
+            <p class="bio">
+                Outside of school, I enjoy exploring low-level systems programming and machine learning research, 
+                creating projects that are useful, efficient, and open to everyone.
+            </p>
+        </header>
+
+        <section>
+            <h2>Interests</h2>
+            <p class="bio">
+                Mathematics (trigonometry, algebra, geometry), large language models, web development, 
+                command-line tools, systems programming, and ML research.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-section">
+                <h3>Languages</h3>
+                <ul class="skills-list">
+                    <li>
+                        <img src="https://cdn.simpleicons.org/go" alt="Go">
+                        Go
+                    </li>
+                    <li>
+                        <img src="https://cdn.simpleicons.org/python" alt="Python">
+                        Python
+                    </li>
+                    <li>
+                        <img src="https://cdn.simpleicons.org/rust" alt="Rust">
+                        Rust
+                    </li>
+                    <li>
+                        <img src="https://cdn.simpleicons.org/c" alt="C">
+                        C
+                    </li>
+                    <li>
+                        <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+                        TypeScript
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h3>Tools & Technologies</h3>
+                <ul class="skills-list">
+                    <li>
+                        <img src="https://cdn.simpleicons.org/anthropic" alt="Claude">
+                        Claude Opus 4.5
+                    </li>
+                    <li>
+                        <img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini">
+                        Gemini 3 Flash
+                    </li>
+                    <li>
+                        <img src="https://avatars.githubusercontent.com/u/223098841?s=200&v=4" alt="GLM">
+                        GLM-4.7
+                    </li>
+                    <li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" alt="Google Antigravity">
+                        Visual Studio Code
+                    </li>
+                    <li>
+                        <img src="https://images.seeklogo.com/logo-png/40/2/windows-11-icon-logo-png_seeklogo-406208.png" alt="Windows 11">
+                        Windows 11
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open-Source Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <div class="project-header">
+                        <span>🏖️</span>
+                        <h3>playa</h3>
+                    </div>
+                    <a href="https://github.com/aquiffoo/playa" class="project-link" target="_blank">github.com/aquiffoo/playa</a>
+                    <p class="project-description">
+                        A minimal video player in the terminal, written in Rust and inspired by the spirit of ffmpeg. 
+                        Designed to bring multimedia capabilities to the command line with simplicity and performance.
+                    </p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <span>🩶</span>
+                        <h3>supermin</h3>
+                    </div>
+                    <a href="https://github.com/aquiffoo/supermin" class="project-link" target="_blank">github.com/aquiffoo/supermin</a>
+                    <p class="project-description">
+                        A C library that makes freeing memory (and sanity) much easier and more intuitive. 
+                        Provides simple abstractions for memory management without sacrificing control.
+                    </p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <span>🍷</span>
+                        <h3>goblet</h3>
+                    </div>
+                    <a href="https://github.com/aquiffoo/goblet" class="project-link" target="_blank">github.com/aquiffoo/goblet</a>
+                    <p class="project-description">
+                        A lightweight Go web framework with a style reminiscent of Flask, but brewed for gophers. 
+                        Focuses on simplicity and idiomatic Go patterns for building web applications.
+                    </p>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <span>🚀</span>
+                        <h3>neo-3</h3>
+                    </div>
+                    <a href="https://huggingface.co/collections/aquiffoo/neo-3" class="project-link" target="_blank">huggingface.co/collections/aquiffoo/neo-3</a>
+                    <p class="project-description">
+                        A series of fully open, state-of-the-art small mixture-of-experts models (1B-A90M and 3B-A400M). 
+                        Research focused on efficient model architectures and open-source machine learning.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Aquiles Fernandes. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
